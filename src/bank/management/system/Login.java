@@ -3,7 +3,7 @@ package bank.management.system;
 import javax.swing.*;
 import java.awt.*; //Without importing this , image class wont work.
 import java.awt.event.*; // used to add ActionListener to the code which allows the functioning of the keys like PIN , signup
-
+import java.sql.*;
 
 
 
@@ -118,12 +118,43 @@ public class Login extends JFrame implements ActionListener {// ActionListener->
         
         // Now defing the button roles using ae-->>
         
+        
+        // From here the change is made to open the signup page -> GPT 
+        if (ae.getSource() == signup) {
+        // Hide the Login frame
+        setVisible(false);
+
+        // Create an instance of SignupOne
+        SignupOne signupOne = new SignupOne();
+
+        // Set the visibility of SignupOne frame to true
+        signupOne.setVisible(true);
+    }
+        
+        // till here it is corrected by GPT 
+        
         if(ae.getSource() == clear){
             cardTextField.setText("");
             pinTextField.setText("");
         }
         else if(ae.getSource() == login){
             
+            //Establishing the connection with the database;
+            Conn conn= new Conn();
+            String cardnumber= cardTextField.getText();
+            String pinnumber= pinTextField.getText();
+            String query ="select * from login where cardnumber='"+cardnumber+"' and pin = '"+pinnumber+"'";
+            try{
+                ResultSet rs= conn.s.executeQuery(query);
+                if(rs.next()){
+                    setVisible(false);
+                    new Transactions(pinnumber).setVisible(true);
+                }else{
+                    JOptionPane.showMessageDialog(null,"Incorrect Card Number or Pin");
+                }
+            }catch(Exception e){
+                System.out.println(e);
+            }
         }
         else if(ae.getSource() == signup){
             
