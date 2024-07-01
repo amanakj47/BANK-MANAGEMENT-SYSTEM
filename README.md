@@ -127,7 +127,7 @@ This project addresses banking transaction needs, providing a foundation for fut
 
 <img width="1470" alt="Screenshot 2024-06-29 at 6 35 14 PM" src="https://github.com/amanakj47/BANK-MANAGEMENT-SYSTEM/assets/124273388/ae56457d-1560-4989-88be-d82c3a50a760">
 
-<img width="794" alt="Screenshot 2024-06-29 at 6 38 20 PM" src="https://github.com/amanakj47/BANK-MANAGEMENT-SYSTEM/assets/124273388/02531e0a-39cd-447a-ab26-28cc34e22518">
+
 
 <img width="808" alt="Screenshot 2024-06-29 at 6 38 47 PM" src="https://github.com/amanakj47/BANK-MANAGEMENT-SYSTEM/assets/124273388/f8c812ce-2eee-4ad1-89b8-27032aea9fb6">
 
